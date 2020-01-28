@@ -15,3 +15,13 @@ print(my_tuple)
 # other than that, you can do everything with a tuple that you can do with a list
 # write some code below showing that the different things you learned to do for lists also works for tuples
 
+my_list = ["lion", "tiger", "bear", "elephant", "zebra", "hippo"]
+print(my_list)
+
+print(my_tuple[0])
+print(my_list[0])
+print(my_tuple[0] == my_list[0])
+print("Length of my tuple is: " + str(len(my_tuple)))
+print("Length of my list is: " + str(len(my_list)))
+
+# End of File.
