@@ -6,8 +6,11 @@ first = input("What is the name of your favorite musician or band?")
 second = input("What is the name of your second favorite musician or band?")
 third = input("What is the name of your third favorite musician or band?")
 
+'''
 print("Your three favorite musicians or bands are:")
 print("00. {}".format(first))
 print("01. {}".format(second))
 print("02. {}".format(third))
+'''
 
+print("Your three favorite musicians or bands are:" + "\n" + "00. {}".format(first) + "\n" + "01. {}".format(second) + "\n" + "02. {}".format(third))

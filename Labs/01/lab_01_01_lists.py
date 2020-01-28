@@ -2,6 +2,10 @@ number_list = []
 
 object_list = ['dog', 'cat', 'shoe', 'sock']
 
+object_list.append('tree')
+
+
+
 # print(number_list)
 # print(object_list)
 #
