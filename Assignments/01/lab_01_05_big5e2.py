@@ -1,11 +1,11 @@
 """This is the Big Five Personality Test
     It will help you understand why you act the way that you do and how your personality is structured.
     For each statement 00-50 mark how much you agree with on the scale 00-05, where:
-		00=disagree
-		01=slightly disagree
-		02=neutral
-		03=slightly agree
-	    05=agree
+		1=disagree
+		2=slightly disagree
+		3=neutral
+		4=slightly agree
+	    5=agree
 
 1. I am the life of the party.
 2. I don't talk a lot.
@@ -38,10 +38,10 @@ question_list = ['I am the life of the party.', 'I don\'t talk a lot.', 'I feel 
 print("This is the Big Five Personality Test")
 print("\t" + "It will help you understand why you act the way that you do and how your personality is structured.")
 print("\t" + "For each statement 00-50 mark how much you agree with on the scale 00-05, where:")
-print("\t" + "\t" + "0=disagree")
-print("\t" + "\t" + "1=slightly disagree")
-print("\t" + "\t" + "2=neutral")
-print("\t" + "\t" + "3=slightly agree")
+print("\t" + "\t" + "1=disagree")
+print("\t" + "\t" + "2=slightly disagree")
+print("\t" + "\t" + "3=neutral")
+print("\t" + "\t" + "4=slightly agree")
 print("\t" + "\t" + "5=agree")
 print("\n")
 
