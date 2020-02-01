@@ -47,20 +47,16 @@ print("\n")
 
 answer_list = []
 final_score = 0
-for question in question_list:
+for i in range(0, len(question_list)):
+	question = question_list[i]
 	answer = int(input(question))
+
+	if i % 2 == 1:
+		answer *= -1
+
 	answer_list.append(answer)
 	final_score += answer
 
-
-if final_score <= 15:
-	print("Your extroversion score is: " + str(final_score) + " out of 50!")
-	print("You seem pretty introverted!")
-elif final_score <= 40:
-	print("Your extroversion score is: " + str(final_score) + " out of 50!")
-	print("You seem neutral!")
-else:
-	print("Your extroversion score is: " + str(final_score) + " out of 50!")
-	print("You seem pretty extroverted!")
+print("Your total extroversion score is: " + str(final_score))
 
 # End of File.

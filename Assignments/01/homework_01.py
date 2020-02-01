@@ -11,7 +11,7 @@ print(a1 + "\n\n")
     2. the for loop lab described two ways of writing for loops. How were they different? What are the advantages
     of each way of doing it? (1 POINTS)
 '''
-a2 = "In python, there is a for in loop and an iterative for loop. A for in loop allows direct access to the elements, while an iterative for loop uses an index to loop through the list. If we do not need the index, or are just grabbing the values from one list, a for in loop is advantageous. However, if we need the index or are grabbing values from multiple lists, a for loop is advantageous."
+a2 = "In python, there is a for in loop and an iterative for loop. A for in loop allows direct access to the elements, while an iterative for loop uses an index to loop through the list. If we do not need the index (ie we don't need to care about order of retrieval), or are just grabbing the values from one list, a for in loop is advantageous because we do not have to keep track of the indices. However, if we need the index (ie grabbing the 3rd element first) or are grabbing values from multiple lists, a for loop is advantageous because we can manipulate the order using the indices."
 print(a2 + "\n\n")
 
 '''
@@ -23,7 +23,7 @@ print(a3 + "\n\n")
 '''
     3. what is a list "slice"? How do you slice a list, and what is the result? (1 POINTS)
 '''
-a4 = "A slice is a new list made using the contents of the original list. To slice, we use the bracket notation (Ex: my_list[1:3]). The result is a new list with values pertaining to the index. In the example, it would create a list containing element at index 1 and 2 (3 is excluded)."
+a4 = "A slice is a new list made using the contents of the original list. It can be the whole list, but is usually a partial segment of the original list. To slice, we use the bracket notation (Ex: my_list[1:3]). The result is a new list with values pertaining to the index. In the example provided, it would create a list containing element at index 1 and 2 (3 is excluded)."
 print(a4 + "\n\n")
 
 
@@ -58,7 +58,12 @@ print(concat_list)
 print("\n")
 
 print("answer to 5d")
-concat_list_no_dup = list(dict.fromkeys(concat_list))
+concat_list_no_dup = []
+
+for item in concat_list:
+  if item not in concat_list_no_dup:
+    concat_list_no_dup.append(item)
+
 for thing in concat_list_no_dup:
   print("Count of " + str(thing) + " : " + str(concat_list.count(thing)))
 
@@ -109,9 +114,6 @@ while thing != 'done':
   thing = input("Word #" + str(count) + " : ")
 
 if (not (len(temp_list) == 0)):
-  temp_list.pop(-1)
-
-if (not (len(temp_list) == 0)):
   while len(temp_list) < 3:
     temp_list.append('')
 
@@ -138,7 +140,11 @@ input_string = "i am the egg man. they are the egg men. i am the walrus. goo goo
 token_list = input_string.split(" ")
 print(token_list)
 
-type_list = list(dict.fromkeys(token_list))
+type_list = []
+for item in token_list:
+  if item not in type_list:
+    type_list.append(item)
+
 print(type_list)
 
 for word in type_list:
@@ -168,23 +174,16 @@ print("\n")
 
 answer_list = []
 final_score = 0
-for question in question_list:
+for i in range(0, len(question_list)):
+  question = question_list[i]
   answer = int(input(question))
+
+  if i % 2 == 1:
+    answer *= -1
+
   answer_list.append(answer)
   final_score += answer
 
-
-if final_score <= 15:
-  print("Your extroversion score is: " + str(final_score) + " out of 50!")
-  print("You seem pretty introverted!")
-elif final_score <= 40:
-  print("Your extroversion score is: " + str(final_score) + " out of 50!")
-  print("You seem neutral!")
-else:
-  print("Your extroversion score is: " + str(final_score) + " out of 50!")
-  print("You seem pretty extroverted!")
-
-print("\n\n")
-print("Done!")
+print("Your total extroversion score is: " + str(final_score))
 
 # End of File.
